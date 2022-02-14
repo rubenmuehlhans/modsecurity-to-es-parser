@@ -87,7 +87,7 @@ class ModSecurityParser():
 		return json.dumps(items)
 
 	def send_to_elasticsearch(self, data):
-		self.es.index(index = "modsecurity_logs", doc_type = "modsecurity", body = data)
+		self.es.index(index = "modsecurity_logs",  document = data)
 
 	def make_backup(self, path):
 		if not os.path.exists(self.backup_path):
