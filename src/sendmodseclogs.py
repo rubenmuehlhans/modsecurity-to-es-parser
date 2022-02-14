@@ -15,7 +15,7 @@ __author__ = "Cristian Souza <cristianmsbr@gmail.com>"
 
 class ModSecurityParser():
 	def __init__(self):
-		self.es = Elasticsearch(["http://ip:9200"], http_auth = ("elastic", "password"))
+		self.es = Elasticsearch(["http://ip:9200"], basic_auth = ("elastic", "password"))
 		self.descriptions_file = open("descriptions.txt", "r").readlines()
 
 		self.dir_count = 0
